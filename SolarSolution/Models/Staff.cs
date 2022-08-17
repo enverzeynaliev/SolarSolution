@@ -21,7 +21,7 @@ public class Staff
     public string Description { get; set; }
 
     // Дата рождения
-    public DateOnly Birthday { get; set; }
+    public DateTime Birthday { get; set; }
 
     //Урл на фото сотрудника (Временно)
     public string Picture { get; set; }

@@ -1,8 +1,21 @@
-﻿@{
+﻿@model IEnumerable<Staff>
+
+@{
+
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @foreach (var staff in Model)
+        {
+            <div class="container bg-white mb-3" style="border-radius: 8px; padding: 24px">
+                <div class="row align-items-center">
+                    <div class="col-md-auto d-flex flex-row align-items-center">
+                    @($"{staff.Surname} {staff.FirstName} {staff.Birthday}")
+                    </div>
+                </div>
+            </div>
+        }
+
 </div>

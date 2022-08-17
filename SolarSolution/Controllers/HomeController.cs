@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using SolarSolution.DataLayer.Repositories;
 using SolarSolution.Models;
 
 namespace SolarSolution.Controllers;
@@ -7,15 +8,17 @@ namespace SolarSolution.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IStaffRepository _staffRepository;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, IStaffRepository staffRepository)
     {
         _logger = logger;
+        _staffRepository = staffRepository;
     }
 
     public IActionResult Index()
     {
-        return View();
+        return View(_staffRepository.GetRecentBirthdays());
     }
 
     public IActionResult Privacy()

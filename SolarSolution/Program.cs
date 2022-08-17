@@ -1,14 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using SolarSolution.DataLayer;
+using SolarSolution.DataLayer.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
         new Microsoft.EntityFrameworkCore.MySqlServerVersion("5.7")));
+builder.Services.AddScoped<IStaffRepository, StaffRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
