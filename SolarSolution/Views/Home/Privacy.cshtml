@@ -1,6 +1,35 @@
-﻿@{
+﻿@model IEnumerable<Staff>
+
+@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <h1 class="display-4">Список всех сотрудников</h1>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Фотография</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Должность</th>
+            <th>Дата рождения</th>
+        </tr>
+        </thead>
+        @foreach (var staff in Model)
+        {
+            <tbody>
+            <tr style="text-align:center">
+                <td style="text-align:center"> @($"{staff.Picture}")</td>
+                <td style="text-align:center"> @($"{staff.Surname}")</td>
+                <td style="text-align:center">@($"{staff.FirstName}")</td>
+                <td style="text-align:center">@($"{staff.Position}")</td>
+                <td style="text-align:center">@($"{staff.Birthday:dd/MM/yyyy} {staff.Birthday.DayOfYear} {DateTime.Now.DayOfYear}")</td>
+            </tr>
+            </tbody>
+        }
+    </table>
+</div>
+
 
 <p>Use this page to detail your site's privacy policy.</p>

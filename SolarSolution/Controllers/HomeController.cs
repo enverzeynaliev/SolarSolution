@@ -14,6 +14,7 @@ public class HomeController : Controller
     {
         _logger = logger;
         _staffRepository = staffRepository;
+
     }
 
     public IActionResult Index()
@@ -23,7 +24,7 @@ public class HomeController : Controller
 
     public IActionResult Privacy()
     {
-        return View();
+        return View(_staffRepository.GetAllStaff());
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
