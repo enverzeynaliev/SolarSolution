@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Staff>
+
+@{
+    ViewData["Title"] = "Все сотрудники";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Список всех сотрудников</h1>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Фотография</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Должность</th>
+            <th>Дата рождения</th>
+            <th></th>
+        </tr>
+        </thead>
+        @foreach (var staff in Model)
+        {
+            <tbody>
+            <tr style="text-align:center">
+                <td >
+                    <img class="rounded-circle" height="50px" src="~/imgs/@(staff.Picture ?? "customfoto.jpg")">
+                </td>
+                @* <td > <img class="rounded-circle" height="50px" src="~/imgs/@staff.Picture"></td> *@
+                <td> @($"{staff.Surname}")</td>
+                <td>@($"{staff.FirstName}")</td>
+                <td>@($"{staff.Position}")</td>
+                <td>@($"{staff.Birthday:dd/MM/yyyy}")</td>
+                <td>
+                    <form method="get">
+                        <input hidden="hidden" value="@staff.Id" name="id">
+                        <input type="submit" value="X" formaction="@Url.Action("DeletePerson")">
+                        <input type="submit" value="V" formaction="@Url.Action("AddStaff")">
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        }
+
+    </table>
+</div>
+
+
+<p>Use this page to detail your site's privacy policy.</p>

@@ -15,12 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\Rider\SolarSolution\SolarSolution
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/Rider/SolarSolution/SolarSolution/Views/Home/AllStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGxTdGFmZi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Rider/SolarSolution/SolarSolution/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Rider/SolarSolution/SolarSolution/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[F:/Rider/SolarSolution/SolarSolution/Views/Home/newPerson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxuZXdQZXJzb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Rider/SolarSolution/SolarSolution/Views/Shared/Error.cshtml]

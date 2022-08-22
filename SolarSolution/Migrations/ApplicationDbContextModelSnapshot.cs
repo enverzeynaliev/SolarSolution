@@ -41,7 +41,6 @@ namespace SolarSolution.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Picture")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Position")

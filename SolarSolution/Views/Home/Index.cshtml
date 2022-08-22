@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Staff>
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Главная";
 }
 
 <div class="text-center">
@@ -20,10 +20,10 @@
     @foreach (var staff in Model)
     {
         <tr style="text-align:center">
-            <td style="text-align:center"> @($"{staff.Surname}")</td>
-            <td style="text-align:center">@($"{staff.FirstName}")</td>
-            <td style="text-align:center">@($"{staff.Position}")</td>
-            <td style="text-align:center">@($"{staff.Birthday:dd/MM/yyyy}")</td>
+            <td> @($"{staff.Surname}")</td>
+            <td>@($"{staff.FirstName}")</td>
+            <td>@($"{staff.Position}")</td>
+            <td>@($"{staff.Birthday:dd/MM/yyyy}")</td>
         </tr>
     }
         </tbody>

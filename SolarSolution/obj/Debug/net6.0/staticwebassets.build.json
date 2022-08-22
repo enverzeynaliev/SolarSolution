@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cr0PsKOX4pgvzldo2tYTYY1Rd+yuDaiZMZzrJrfaooQ=",
+  "Hash": "Va1QOS71VpGMN89d1r9H232XOMewUKkTQpKLzo5N5Jw=",
   "Source": "SolarSolution",
   "BasePath": "_content/SolarSolution",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "F:\\Rider\\SolarSolution\\SolarSolution\\wwwroot\\imgs\\customfoto.jpg",
+      "SourceId": "SolarSolution",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Rider\\SolarSolution\\SolarSolution\\wwwroot\\",
+      "BasePath": "_content/SolarSolution",
+      "RelativePath": "imgs/customfoto.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\customfoto.jpg"
     },
     {
       "Identity": "F:\\Rider\\SolarSolution\\SolarSolution\\wwwroot\\js\\site.js",

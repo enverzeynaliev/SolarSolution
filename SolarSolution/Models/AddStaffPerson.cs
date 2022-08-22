@@ -1,6 +1,6 @@
 ﻿namespace SolarSolution.Models;
 
-public class Staff
+public class AddStaffPerson
 {
     // Уникальный номер сотрудника
     public int Id { get; set; }
@@ -23,6 +23,6 @@ public class Staff
     // Дата рождения
     public DateTime Birthday { get; set; }
 
-    //Урл на фото сотрудника (Временно)
-    public string? Picture { get; set; }
+    //Урл на фото сотрудника
+    public IFormFile Picture { get; set; }
 }
