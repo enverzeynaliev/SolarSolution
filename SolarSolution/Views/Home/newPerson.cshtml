@@ -7,16 +7,15 @@
 <div class="text-center">
     <h1 class="display-4">@(Model.Id==0?"Добавить день рождения":"Редактировать день рождения")</h1>
 
-    <form method="post" asp-action="@(Model.Id == 0 ? "AddBirthdayPost" : "EditBirthdayPost")" enctype="multipart/form-data">
+    <form method="post" asp-action="@(Model.Id == 0 ? "AddStaffPost" : "EditPersonPost")" enctype="multipart/form-data">
         <input name="Id" asp-for="Id" hidden="hidden">
-        <input type="text" name="Surname" asp-for="Surname">
-        <input type="text" name="FirstName" asp-for="FirstName">
-        <input type="text" name="LastName" asp-for="LastName">
-        <input type="text" name="Position" asp-for="Position">
-        <input type="text" name="Description" asp-for="Description">
-        <input type="date" name="Birthday" asp-for="Birthday">
-        <input type="file" name="Picture" asp-for="Picture">
-        <input type="submit" value="Добавить">
+        <input placeholder="Фамилия" type="text" name="Surname" asp-for="Surname">
+        <input placeholder="Имя" type="text" name="FirstName" asp-for="FirstName">
+        <input placeholder="Отчество" type="text" name="LastName" asp-for="LastName">
+        <input placeholder="Должность" type="text" name="Position" asp-for="Position">
+        <input placeholder="Дата рождения" type="date" name="Birthday" asp-for="Birthday">
+        <input placeholder="Портрет" type="file" name="Picture" asp-for="Picture">
+        <input type="submit" value="@(Model.Id==0? "Добавить" : "Изменить")">
     </form>
    
 </div>

@@ -12,13 +12,10 @@ public class Staff
     public string FirstName { get; set; }
 
     // Отчество сотрудника
-    public string LastName { get; set; }
+    public string? LastName { get; set; }
 
     // Должность
     public string Position { get; set; }
-
-    // Краткое описание
-    public string Description { get; set; }
 
     // Дата рождения
     public DateTime Birthday { get; set; }

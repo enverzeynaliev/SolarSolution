@@ -42,9 +42,9 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddStaff(AddStaffPerson addStaffPerson)
+    public async Task<IActionResult> AddStaffPost(AddStaffPerson addStaffPerson)
     {
-        await _staffService.AddBirthday(addStaffPerson);
+        await _staffService.AddStaff(addStaffPerson);
         return RedirectToAction("AllStaff");
     }
 
@@ -63,7 +63,7 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> StaffBirthdayEditPost(EditStaffPerson editStaffPerson)
+    public async Task<IActionResult> EditPersonPost(EditStaffPerson editStaffPerson)
     {
         await _staffService.EditStaff(editStaffPerson);
         return RedirectToAction("AllStaff");

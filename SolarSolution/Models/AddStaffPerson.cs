@@ -24,5 +24,5 @@ public class AddStaffPerson
     public DateTime Birthday { get; set; }
 
     //Урл на фото сотрудника
-    public IFormFile Picture { get; set; }
+    public IFormFile? Picture { get; set; }
 }

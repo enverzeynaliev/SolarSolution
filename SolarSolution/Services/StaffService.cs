@@ -14,12 +14,12 @@ public class StaffService
         _environment = environment;
     }
 
-    public async Task AddBirthday(AddStaffPerson addStaffPerson)
+    public async Task AddStaff(AddStaffPerson addStaffPerson)
     {
         if (addStaffPerson.Picture != null)
         {
             // путь к папке Files
-            string path = "/img/" + addStaffPerson.Picture.FileName;
+            string path = "/imgs/" + addStaffPerson.Picture.FileName;
             // сохраняем файл в папку Files в каталоге wwwroot
             using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
             {
@@ -33,7 +33,8 @@ public class StaffService
             FirstName = addStaffPerson.FirstName,
             LastName = addStaffPerson.LastName,
             Position = addStaffPerson.Position,
-            Picture = addStaffPerson.Picture?.FileName ?? "default.jpg"
+            Picture = addStaffPerson.Picture?.FileName ?? "default.jpg",
+            Birthday = addStaffPerson.Birthday
         });
     }
 
@@ -47,7 +48,7 @@ public class StaffService
         if (editStaffPerson.Picture != null)
         {
             // путь к папке Files
-            string path = "/img/" + editStaffPerson.Picture.FileName;
+            string path = "/imgs/" + editStaffPerson.Picture.FileName;
             // сохраняем файл в папку Files в каталоге wwwroot
             using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
             {

@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SolarSolution.DataLayer;
 using SolarSolution.DataLayer.Repositories;
+using SolarSolution.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection"),
         new Microsoft.EntityFrameworkCore.MySqlServerVersion("5.7")));
 builder.Services.AddScoped<IStaffRepository, StaffRepository>();
+builder.Services.AddScoped<StaffService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,10 +37,3 @@ app.MapControllerRoute(
 
 app.Run();
 
-public class MySqlServerVersion
-{
-    public MySqlServerVersion(string s)
-    {
-        throw new NotImplementedException();
-    }
-}
