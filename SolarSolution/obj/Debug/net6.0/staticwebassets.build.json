@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PSGzHpYCpYKPiotTkgJnqbSHhfA87Ko9cWrRvwxOHLs=",
+  "Hash": "vB/gqgAXyznbSPy8Ju07ZZa/QikA3qZrZqEmxCyzPl0=",
   "Source": "SolarSolution",
   "BasePath": "_content/SolarSolution",
   "Mode": "Default",
@@ -219,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\customfoto.jpg"
+    },
+    {
+      "Identity": "F:\\Rider\\SolarSolution\\SolarSolution\\wwwroot\\imgs\\image-removebg-preview (2).png",
+      "SourceId": "SolarSolution",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Rider\\SolarSolution\\SolarSolution\\wwwroot\\",
+      "BasePath": "_content/SolarSolution",
+      "RelativePath": "imgs/image-removebg-preview (2).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\image-removebg-preview (2).png"
     },
     {
       "Identity": "F:\\Rider\\SolarSolution\\SolarSolution\\wwwroot\\imgs\\unknown.png",

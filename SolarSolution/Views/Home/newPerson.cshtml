@@ -4,18 +4,26 @@
     ViewData["Title"] = Model.Id == 0 ? "Добавить" : "Редактировать";
 }
 
-<div class="text-center">
-    <h1 class="display-4">@(Model.Id==0?"Добавить день рождения":"Редактировать день рождения")</h1>
-
-    <form method="post" asp-action="@(Model.Id == 0 ? "AddStaffPost" : "EditPersonPost")" enctype="multipart/form-data">
-        <input name="Id" asp-for="Id" hidden="hidden">
-        <input placeholder="Фамилия" type="text" name="Surname" asp-for="Surname">
-        <input placeholder="Имя" type="text" name="FirstName" asp-for="FirstName">
-        <input placeholder="Отчество" type="text" name="LastName" asp-for="LastName">
-        <input placeholder="Должность" type="text" name="Position" asp-for="Position">
-        <input placeholder="Дата рождения" type="date" name="Birthday" asp-for="Birthday">
-        <input placeholder="Портрет" type="file" name="Picture" asp-for="Picture">
-        <input type="submit" value="@(Model.Id==0? "Добавить" : "Изменить")">
-    </form>
-   
+<div class="text-center d-flex col">
+    <h5 class="display-5">@(Model.Id == 0 ? "Добавить сотрудника" : "Редактировать сотрудника")</h5>
 </div>
+<br/>
+<form class="flex-column form-check" method="post" asp-action="@(Model.Id == 0 ? "AddStaffPost" : "EditPersonPost")" enctype="multipart/form-data">
+    <div class="form-control-lg d-flex flex-column mt-2 ">
+        <input class="form-control" name="Id" asp-for="Id" hidden="hidden">
+        <label for="1">Фамилия</label>
+        <input class="form-control" type="text" name="Surname" id="1" asp-for="Surname">
+        <label for="2">Имя</label>
+        <input class="form-control" type="text" name="FirstName" id="2" asp-for="FirstName">
+        <label for="3">Отчество</label>
+        <input class="form-control" type="text" name="LastName" id="3" asp-for="LastName">
+        <label for="4">Должность</label>
+        <input class="form-control" type="text" name="Position" id="4" asp-for="Position">
+        <label for="5">Дата рождения</label>
+        <input class="form-control" type="date" name="Birthday" id="5" asp-for="Birthday">
+        <label for="6">Картинка</label>
+        <input class="form-control" type="file" name="Picture" id="6" asp-for="Picture">
+
+        <input type="submit" class="btn-outline-success" value="@(Model.Id == 0 ? "Добавить" : "Редактировать")">
+    </div>
+</form>
